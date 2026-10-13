@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Messenger</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Public Messenger</h1>
+      <p class="subtitle">Anyone with this link can send a message.</p>
+
+      <form id="message-form" class="message-form">
+        <label>
+          Name
+          <input id="name" name="name" maxlength="50" placeholder="Your name" required />
+        </label>
+
+        <label>
+          Message
+          <textarea id="message" name="message" maxlength="500" rows="4" placeholder="Type your message..." required></textarea>
+        </label>
+
+        <button type="submit">Send message</button>
+      </form>
+
+      <section class="chat-box">
+        <h2>Messages</h2>
+        <div id="messages" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
